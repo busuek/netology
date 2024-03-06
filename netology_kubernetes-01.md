@@ -69,5 +69,23 @@ Restarting service kubelite.
 1. Установить на локальную машину kubectl.
 2. Настроить локально подключение к кластеру.
 ```
-
+Получил данные кластера microk8s на удаленной машине:
+[vega@fedora ~]$ sudo microk8s config
+...
+Потом внес параметры cluster, user и context на локальной машине
+vega@vegaVM ~ % sudo vim .kube/config
+vega@vegaVM ~ % kubectl config get-contexts
+CURRENT   NAME             CLUSTER            AUTHINFO         NAMESPACE
+*         docker-desktop   docker-desktop     docker-desktop
+          microk8s         microk8s-cluster   admin
+vega@vegaVM ~ % kubectl config use-context microk8s
+Switched to context "microk8s".
+vega@vegaVM ~ % kubectl get nodes
+NAME          STATUS   ROLES    AGE   VERSION
+fedora   Ready    <none>   75m   v1.28.1
 ```
+3. Подключился к дашборду с помощью port-forward.
+```
+[vega@fedora ~]$ kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
+```
+![image](https://github.com/busuek/netology/assets/101875725/293a4711-0973-4f7d-b146-5cae2b8dce2d)
