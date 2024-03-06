@@ -66,3 +66,20 @@ Request Body:
 - Использовать image — gcr.io/kubernetes-e2e-test-images/echoserver:2.2.
 - Создать Service с именем netology-svc и подключить к netology-web.
 - Подключиться локально к Service с помощью kubectl port-forward и вывести значение (curl или в браузере).
+- ууу
+- ааа
+```
+[vega@fedora 1.2]$ sudo nano netology-web-pod.yaml 
+[vega@fedora 1.2]$ kubectl apply -f netology-web-pod.yaml
+pod/netology-web created
+[vega@fedora 1.2]$ sudo nano netology-svc.yaml 
+[vega@fedora 1.2]$ kubectl apply -f netology-svc.yaml
+service/netology-svc created
+[vega@fedora 1.2]$ kubectl get pods
+NAME           READY   STATUS    RESTARTS   AGE
+hello-world    1/1     Running   0          18m
+netology-web   1/1     Running   0          5m4s
+[vega@fedora 1.2]$ microk8s kubectl get svc netology-svc
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+netology-svc   ClusterIP   10.152.183.97   <none>        80/TCP    57m
+```
