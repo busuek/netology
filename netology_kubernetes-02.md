@@ -83,3 +83,5 @@ netology-web   1/1     Running   0          5m4s
 NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
 netology-svc   ClusterIP   10.152.183.97   <none>        80/TCP    57m
 ```
+
+![portf](https://github.com/busuek/netology/assets/101875725/ddeaba47-0a93-47cc-becd-6e2f9203fcb0)
