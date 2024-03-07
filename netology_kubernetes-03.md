@@ -220,7 +220,7 @@ Events:
   Normal  Started    4m12s  kubelet            Started container nginx-container
 ```
 
-- Переделываем файлы, перезапускаем все [depoloy](https://github.com/busuek/netology/blob/main/deploy)
+- Переделываем файлы, перезапускаем все [deploy](https://github.com/busuek/netology/blob/main/deploy)
 ```
 [vega@fedora ~]$ kubectl get pods - До
 NAME                               READY   STATUS    RESTARTS      AGE
