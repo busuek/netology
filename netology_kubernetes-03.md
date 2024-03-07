@@ -19,7 +19,7 @@ vagrant@vagrant:~/kube/zad3$ kubectl apply -f apps.yaml
 deployment.apps/my-deployment created
 ```
 
-[apps.yml]()
+[apps.yml](https://github.com/busuek/netology/blob/main/apps)
 
 - Чтобы увеличить количество реплик приложения до 2, вносим изменения в YAML-файл apps.yml, установив значение replicas в 2, и снова применить его к кластеру с помощью kubectl apply.
 ```
@@ -27,13 +27,13 @@ vagrant@vagrant:~/kube/zad3$ kubectl apply -f apps.yaml
 deployment.apps/my-deployment configured
 ```
 
-- Создаем файл для сервиса - vagrant@vagrant:~/kube/zad3$ sudo nano service.yml [service.yml]()
+- Создаем файл для сервиса - vagrant@vagrant:~/kube/zad3$ sudo nano service.yml [service.yml](https://github.com/busuek/netology/blob/main/service)
 ```
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f service.yaml  - запускаем сервис
 service/my-service created
 ```
 
-- Cозданием Pod с приложением multitool [mult.yml]()
+- Cозданием Pod с приложением multitool [mult.yml](https://github.com/busuek/netology/blob/main/mult)
 ```
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f mult.yaml
 pod/multitool-pod configured
@@ -108,8 +108,8 @@ Commercial support is available at
 
 ## Решение:
 
-- Нам нужно создать YAML-файл, который определит наш Deployment с Init-контейнером. Cоздаем файл nginx-deployment.yaml [deployment]()
-- Создаем файл nginx-service.yaml [service]()
+- Нам нужно создать YAML-файл, который определит наш Deployment с Init-контейнером. Cоздаем файл nginx-deployment.yaml [deployment](https://github.com/busuek/netology/blob/main/nginx-deployment)
+- Создаем файл nginx-service.yaml [service](https://github.com/busuek/netology/blob/main/nginx-service)
 
 ```
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f nginx-deployment.yaml
@@ -220,7 +220,7 @@ Events:
   Normal  Started    4m12s  kubelet            Started container nginx-container
 ```
 
-- Переделываем файлы, перезапускаем все [depoloy]()
+- Переделываем файлы, перезапускаем все [depoloy](https://github.com/busuek/netology/blob/main/deploy)
 ```
 [vega@fedora ~]$ kubectl get pods - До
 NAME                               READY   STATUS    RESTARTS      AGE
