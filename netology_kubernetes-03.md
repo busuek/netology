@@ -12,7 +12,45 @@
 - Создать отдельный Pod с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложений из п.1.
 
 ## Решение:
-
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels: 
+        app: myapp
+    spec:
+      containers: 
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+      - name: multitool
+        image: wbitt/network-multitool:latest
+        env:
+        - name: HTTP_PORT
+          value: "1180"
+        - name: HTTPS_PORT
+          value: "11443"
+        ports:
+        - containerPort: 1180
+          name: http-port
+        - containerPort: 11443
+          name: https-port
+```
+kubectl apply -f .\deployment-app.yml
+```
+vagrant@vagrant:~/kube/zad3$ kubectl get po
+NAME                     READY   STATUS    RESTARTS   AGE
+myapp-6ff8dd96cf-x7hgg   2/2     Running   0          103s
+```
 ```
 kubectl apply -f apps.yaml
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f apps.yaml
