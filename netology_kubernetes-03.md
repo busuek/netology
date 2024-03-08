@@ -56,15 +56,11 @@ kubectl apply -f apps.yaml
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f apps.yaml
 deployment.apps/my-deployment created
 ```
-
-[apps.yml](https://github.com/busuek/netology/blob/main/apps)
-
-- Чтобы увеличить количество реплик приложения до 2, вносим изменения в YAML-файл apps.yml, установив значение replicas в 2, и снова применить его к кластеру с помощью kubectl apply.
+- Чтобы увеличить количество реплик приложения до 2, вносим изменения в YAML-файл, установив значение replicas в 2, и снова применить его к кластеру с помощью kubectl apply.
 ```
-vagrant@vagrant:~/kube/zad3$ kubectl apply -f apps.yaml
-deployment.apps/my-deployment configured
+spec:
+  replicas: 2
 ```
-
 - Создаем файл для сервиса - vagrant@vagrant:~/kube/zad3$ sudo nano service.yml [service.yml](https://github.com/busuek/netology/blob/main/service)
 ```
 vagrant@vagrant:~/kube/zad3$ kubectl apply -f service.yaml  - запускаем сервис
