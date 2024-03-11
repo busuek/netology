@@ -26,7 +26,7 @@
 
 1. Создать Deployment приложения, состоящего из двух контейнеров (nginx и multitool), с количеством реплик 3 шт.
 
-Конфиг: [deployment1.yaml](deployment1.yaml)
+Конфиг: [deployment1.yaml](https://github.com/busuek/netology/blob/main/kuber-1.4/deployment1.yaml)
 
 ```
 microk8s kubectl apply -f deployment1.yaml
@@ -40,7 +40,7 @@ deployment   3/3     3            3           33s
 
 2. Создать Service, который обеспечит доступ внутри кластера до контейнеров приложения из п.1 по порту 9001 — nginx 80, по 9002 — multitool 8080.
 
-Конфиг: [service.yaml](service.yaml)
+Конфиг: [service.yaml](https://github.com/busuek/netology/blob/main/kuber-1.4/service.yaml)
 
 ```
 microk8s kubectl apply -f service.yaml
@@ -128,7 +128,7 @@ Cмотреть выше.
 
 1. Создать отдельный Service приложения из Задания 1 с возможностью доступа снаружи кластера к nginx, используя тип NodePort.
 
-Конфиг: [service2.yaml](service2.yaml)
+Конфиг: [service2.yaml](https://github.com/busuek/netology/blob/main/kuber-1.4/service2.yaml)
 
 ```
 microk8s kubectl apply -f service2.yaml
@@ -145,7 +145,7 @@ nginx-svc2   NodePort    10.152.183.240   <none>        9001:30001/TCP,9002:3000
 2. Продемонстрировать доступ с помощью браузера или `curl` с локального компьютера.
 
 <p align="center">
-  <img width="1200" src="welcome.jpg">
+  <img width="1200" src="https://github.com/busuek/netology/blob/main/kuber-1.4/welcome.jpg">
 </p>
 
 3. Предоставить манифест и Service в решении, а также скриншоты или вывод команды п.2.
