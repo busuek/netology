@@ -221,7 +221,7 @@ spec:
               number: 80
 ```
 ```
-PS C:\Users\lugy1\.kube> kubectl describe ingress lugnginx
+[vega@fedora ~]$ kubectl describe ingress lugnginx
 Name:             lugnginx
 Labels:           <none>
 Namespace:        default
