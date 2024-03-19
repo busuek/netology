@@ -159,7 +159,7 @@ Or:
 ```
 5. Скриншот подключения
 
-![image](https://github.com/LugovskoyPavel/devops-netology-2022/assets/104651372/21503a53-6cd5-4094-b4d4-fd0ad3b2533e)
+![one_new](https://github.com/busuek/netology/assets/101875725/7619d2eb-10f5-479a-b296-205df88471e6)
 
 ------
 
@@ -277,6 +277,6 @@ root@depfront-7647b8fc8f-wx7cg:/# curl localhost/api
 ```
 4. Скрин
 
-![image](https://github.com/LugovskoyPavel/devops-netology-2022/assets/104651372/5dc9a302-45f0-4ee6-b033-f0869ea9aed3)
+![two_new](https://github.com/busuek/netology/assets/101875725/4386b86b-8761-46c7-9e96-9f4bc3d63914)
 
 ------
