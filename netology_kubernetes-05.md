@@ -116,7 +116,7 @@ spec:
 4. Из frontend подключаемся к backend
 
 ```
-PS C:\Users\lugy1\.kube> kubectl exec --stdin --tty services/servfront -- /bin/bash
+[vega@fedora ~]$ kubectl exec --stdin --tty services/servfront -- /bin/bash
 root@depfront-7647b8fc8f-wx7cg:/# curl http://servback
 Praqma Network MultiTool (with NGINX) - depback-547bb598-nb5rn - 10.1.254.123 - HTTP: 1181 , HTTPS: 11443
 <br>
