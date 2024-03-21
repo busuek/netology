@@ -30,7 +30,7 @@
 Создать Deployment приложения, использующего локальный PV, созданный вручную.
 
 1. Создать Deployment приложения, состоящего из контейнеров busybox и multitool.  
-Создал [Deployment](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/multitool.yaml)  
+Создал [Deployment](https://github.com/busuek/netology/blob/main/yml/multitool.yaml)  
 ```bash
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl apply -f multitool.yaml
 deployment.apps/multitool created
@@ -40,7 +40,7 @@ multitool-74cc4b9bdd-fgmxr   0/2     Pending   0          17s
 ```
 
 2. Создать PV и PVC для подключения папки на локальной ноде, которая будет использована в поде.  
-Создал [PV](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/pv.yaml) и [PVC](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/pvc.yaml)  
+Создал [PV](https://github.com/busuek/netology/blob/main/yml/pv.yaml) и [PVC](https://github.com/busuek/netology/blob/main/yml/pvc.yaml)  
 ```bash
 
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl apply -f pvc.yaml
@@ -279,9 +279,9 @@ root@k8s:~#
 
 
 2. Создать Deployment приложения состоящего из multitool, и подключить к нему PV, созданный автоматически на сервере NFS.  
-Создал [Deployment](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/multitoolPV.yaml)  
-[PV](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/pvc2.yaml)  
-[SC](https://github.com/AlekseyDrobnyi/netology_devops/blob/main/13.2/yml/sc.yaml)  
+Создал [Deployment](https://github.com/busuek/netology/blob/main/yml/multitoolPV.yaml)  
+[PV](https://github.com/busuek/netology/blob/main/yml/pvc2.yaml)  
+[SC](https://github.com/busuek/netology/blob/main/yml/sc.yaml)  
 Проверяю запуск
 ```bash
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl get pod,pvc,pv,sc
