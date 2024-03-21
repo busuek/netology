@@ -68,28 +68,28 @@ pv     2Gi        RWO            Delete           Bound    default/pvc          
 ```bash
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl exec -c busybox multitool-74cc4b9bdd-fgmxr -- ls -la
 total 52
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 .
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 ..
-drwxr-xr-x    2 root     root         12288 Mar  3 23:15 bin
-drwxr-xr-x    5 root     root           360 Apr  9 12:23 dev
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 etc
-drwxr-xr-x    2 nobody   nobody        4096 Mar 13 18:39 home
-drwxr-xr-x    2 root     root          4096 Mar  3 23:15 lib
+drwxr-xr-x    1 root     root          4096 Mar  21 12:23 .
+drwxr-xr-x    1 root     root          4096 Mar  21 12:23 ..
+drwxr-xr-x    2 root     root         12288 Mar  14 23:15 bin
+drwxr-xr-x    5 root     root           360 Mar  21 12:23 dev
+drwxr-xr-x    1 root     root          4096 Mar  17 12:23 etc
+drwxr-xr-x    2 nobody   nobody        4096 Mar  21 18:39 home
+drwxr-xr-x    2 root     root          4096 Mar  17 23:15 lib
 lrwxrwxrwx    1 root     root             3 Mar  3 23:15 lib64 -> lib
-drwxrwxrwx    2 nobody   nobody        4096 Apr  9 12:23 output
-dr-xr-xr-x  272 root     root             0 Apr  9 12:23 proc
-drwx------    2 root     root          4096 Mar 13 18:39 root
-dr-xr-xr-x   13 root     root             0 Apr  9 12:23 sys
-drwxrwxrwt    2 root     root          4096 Mar 13 18:39 tmp
-drwxr-xr-x    4 root     root          4096 Mar 13 18:39 usr
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 var
+drwxrwxrwx    2 nobody   nobody        4096 Mar  9 12:23 output
+dr-xr-xr-x  272 root     root             0 Mar  9 12:23 proc
+drwx------    2 root     root          4096 Mar 21 18:39 root
+dr-xr-xr-x   13 root     root             0 Mar  9 12:23 sys
+drwxrwxrwt    2 root     root          4096 Mar 21 18:39 tmp
+drwxr-xr-x    4 root     root          4096 Mar 21 18:39 usr
+drwxr-xr-x    1 root     root          4096 Mar  9 12:23 var
 
 
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl exec -c busybox multitool-74cc4b9bdd-fgmxr -- ls -la /output
 total 12
-drwxrwxrwx    2 nobody   nobody        4096 Apr  9 12:23 .
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 ..
--rw-r--r--    1 root     root            91 Apr  9 12:25 file.txt
+drwxrwxrwx    2 nobody   nobody        4096 Mar  21 12:23 .
+drwxr-xr-x    1 root     root          4096 Mar  21 12:23 ..
+-rw-r--r--    1 root     root            91 Mar  21 12:25 file.txt
 
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl exec -c busybox multitool-74cc4b9bdd-fgmxr -- cat /output/file.txt
 Write!
@@ -102,28 +102,28 @@ Write!
 
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl exec -c multitool multitool-74cc4b9bdd-fgmxr -- ls -la
 total 84
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 .
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 ..
-drwxr-xr-x    1 root     root          4096 Dec 19  2021 bin
-drwx------    2 root     root          4096 Dec 19  2021 certs
-drwxr-xr-x    5 root     root           360 Apr  9 12:23 dev
+drwxr-xr-x    1 root     root          4096 Mar 21 12:23 .
+drwxr-xr-x    1 root     root          4096 Mar 21 12:23 ..
+drwxr-xr-x    1 root     root          4096 Mar 21  2021 bin
+drwx------    2 root     root          4096 Mar 14  2021 certs
+drwxr-xr-x    5 root     root           360 Mar 13 12:23 dev
 drwxr-xr-x    1 root     root          4096 Dec 19  2021 docker
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 etc
-drwxr-xr-x    2 root     root          4096 Nov 24  2021 home
-drwxr-xr-x    1 root     root          4096 Dec 19  2021 lib
-drwxr-xr-x    5 root     root          4096 Nov 24  2021 media
-drwxr-xr-x    2 root     root          4096 Nov 24  2021 mnt
-drwxrwxrwx    2 nobody   nobody        4096 Apr  9 12:23 multitool
-drwxr-xr-x    2 root     root          4096 Nov 24  2021 opt
-dr-xr-xr-x  270 root     root             0 Apr  9 12:23 proc
-drwx------    2 root     root          4096 Nov 24  2021 root
-drwxr-xr-x    1 root     root          4096 Apr  9 12:23 run
-drwxr-xr-x    1 root     root          4096 Dec 19  2021 sbin
-drwxr-xr-x    2 root     root          4096 Nov 24  2021 srv
-dr-xr-xr-x   13 root     root             0 Apr  9 12:23 sys
-drwxrwxrwt    2 root     root          4096 Nov 24  2021 tmp
-drwxr-xr-x    1 root     root          4096 Dec 19  2021 usr
-drwxr-xr-x    1 root     root          4096 Dec 19  2021 var
+drwxr-xr-x    1 root     root          4096 Mar  9 12:23 etc
+drwxr-xr-x    2 root     root          4096 Mar 21  2021 home
+drwxr-xr-x    1 root     root          4096 Mar 19  2021 lib
+drwxr-xr-x    5 root     root          4096 Mar 21  2021 media
+drwxr-xr-x    2 root     root          4096 Mar 21  2021 mnt
+drwxrwxrwx    2 nobody   nobody        4096 Mar  9 12:23 multitool
+drwxr-xr-x    2 root     root          4096 Mar 21  2021 opt
+dr-xr-xr-x  270 root     root             0 Mar  9 12:23 proc
+drwx------    2 root     root          4096 Mar 21  2021 root
+drwxr-xr-x    1 root     root          4096 Mar  9 12:23 run
+drwxr-xr-x    1 root     root          4096 Mar 19  2021 sbin
+drwxr-xr-x    2 root     root          4096 Mar 24  2021 srv
+dr-xr-xr-x   13 root     root             0 Mar  9 12:23 sys
+drwxrwxrwt    2 root     root          4096 Mar 21  2021 tmp
+drwxr-xr-x    1 root     root          4096 Mar 19  2021 usr
+drwxr-xr-x    1 root     root          4096 Mar 19  2021 var
 ubuntu@ubuntu-VirtualBox:~/.kube$ kubectl exec -c multitool multitool-74cc4b9bdd-fgmxr -- cat /multitool/file.txt
 Write!
 Write!
@@ -233,8 +233,8 @@ buntu@k8s:~$ sudo systemctl status nfs-server
    Main PID: 614280 (code=exited, status=0/SUCCESS)
         CPU: 5ms
 
-Apr 09 11:56:41 k8s systemd[1]: Starting NFS server and services...
-Apr 09 11:56:41 k8s systemd[1]: Finished NFS server and services.
+Mar 21 11:56:41 k8s systemd[1]: Starting NFS server and services...
+Mar 21 11:56:41 k8s systemd[1]: Finished NFS server and services.
 ```
 И не забываю настроить драйвер `csi`  
 ```bash
@@ -255,7 +255,7 @@ root@k8s:~# microk8s helm3 install csi-driver-nfs csi-driver-nfs/csi-driver-nfs 
     --namespace kube-system \
     --set kubeletDir=/var/snap/microk8s/common/var/lib/kubelet
 NAME: csi-driver-nfs
-LAST DEPLOYED: Sun Apr  9 13:31:10 2023
+LAST DEPLOYED: Sun Mar 21 13:31:10 2024
 NAMESPACE: kube-system
 STATUS: deployed
 REVISION: 1
