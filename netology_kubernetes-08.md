@@ -26,7 +26,7 @@
 
 1. Создать Deployment приложения, состоящего из контейнеров busybox и multitool.
 
-Конфиг: [deployment1.yaml](deployment1.yaml)
+Конфиг: [deployment1.yaml](https://github.com/busuek/netology/blob/main/ter-8/deployment1.yaml)
 
 ```
 microk8s kubectl apply -f deployment1.yaml
@@ -35,7 +35,7 @@ deployment.apps/deployment created
 
 2. Решить возникшую проблему с помощью ConfigMap.
 
-Конфиг: [configmap1.yaml](configmap1.yaml)
+Конфиг: [configmap1.yaml](https://github.com/busuek/netology/blob/main/ter-8/configmap1.yaml)
 
 ```
 microk8s kubectl apply -f configmap1.yaml
@@ -53,7 +53,7 @@ deployment-5cd95d6d79-5xxt7   2/2     Running   0          3m36s
 ```
 4. Сделать простую веб-страницу и подключить её к Nginx с помощью ConfigMap. Подключить Service и показать вывод curl или в браузере.
 
-Конфиг: [service.yaml](service.yaml)
+Конфиг: [service.yaml](https://github.com/busuek/netology/blob/main/ter-8/service.yaml)
 ```
 microk8s kubectl apply -f service.yaml
 service/servicename created
@@ -84,7 +84,7 @@ curl 10.100.0.195:30000
 
 1. Создать Deployment приложения, состоящего из Nginx.
 
-Конфиг: [deployment2.yaml](deployment2.yaml)
+Конфиг: [deployment2.yaml](https://github.com/busuek/netology/blob/main/ter-8/deployment2.yaml)
 ```
 microk8s kubectl apply -f deployment2.yaml
 deployment.apps/deployment2 created
@@ -92,7 +92,7 @@ deployment.apps/deployment2 created
 ```
 2. Создать собственную веб-страницу и подключить её как ConfigMap к приложению.
 
-Конфиг: [configmap.yaml](configmap.yaml)
+Конфиг: [configmap.yaml](https://github.com/busuek/netology/blob/main/ter-8/configmap.yaml)
 
 3. Выпустить самоподписной сертификат SSL. Создать Secret для использования сертификата.
 
@@ -106,9 +106,9 @@ secret/secret-tlsname created
 ```
 4. Создать Ingress и необходимый Service, подключить к нему SSL в вид. Продемонстировать доступ к приложению по HTTPS.
 
-Конфиг: [ingress.yaml](ingress.yaml)
+Конфиг: [ingress.yaml](https://github.com/busuek/netology/blob/main/ter-8/ingress.yaml)
 
-Конфиг: [service.yaml](service.yaml)
+Конфиг: [service.yaml](https://github.com/busuek/netology/blob/main/ter-8/service.yaml)
 ```
 microk8s kubectl apply -f ingress.yaml
 ingress.networking.k8s.io/ingressname created
