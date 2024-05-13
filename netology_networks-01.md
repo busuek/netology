@@ -33,7 +33,7 @@ Resource Terraform для Yandex Cloud:
 
 #### Решение
 
-- [Terraform](./terraform) 
+- [Terraform](https://github.com/busuek/netology/tree/main/terraform) 
 
 Виртуальные машины
 ![](img/yc_vm.png)
