@@ -119,7 +119,7 @@ resource "yandex_kms_symmetric_key" "encryptkey" {
 
 10. Дополним файл `main.tf` для Terraform необходимой информацией для шифрования содержимого бакета Object Storage и размещения в нём файла с картинкой:
 ```
-resource "yandex_storage_bucket" "listopad-netology" {
+resource "yandex_storage_bucket" "maksim" {
   access_key = yandex_iam_service_account_static_access_key.accesskey-bucket.access_key
   secret_key = yandex_iam_service_account_static_access_key.accesskey-bucket.secret_key
   bucket     = "listopad-netology"
@@ -143,7 +143,7 @@ resource "yandex_storage_bucket" "listopad-netology" {
 
 
 ```
-* Опишем блок для загрузки в бакет с именем `listopad-netology` графического файла `netology.png`:
+* Опишем блок для загрузки в бакет с именем `maksim` графического файла `netology.png`:
 ```
 resource "yandex_storage_object" "netology" {
   access_key = yandex_iam_service_account_static_access_key.accesskey-bucket.access_key
